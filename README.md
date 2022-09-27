@@ -19,4 +19,4 @@ What things are needed to install the software and how to install them. For now,
 
 ## Authors
 
-* ** Jay ** - *Initial work* - [YourWebsite](https://example.com/)
+* Jay - *Initial work* - [YourWebsite](https://example.com/)
