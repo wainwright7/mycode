@@ -1,7 +1,6 @@
 # mycode (Project Title)
 
-One Paragraph of your project description goes here. Describe what you're trying to do.
-What is the purpose of putting up this repo?
+I am learning python language and builing this project as my in-class learning experience.
 
 ## Getting Started
 
