@@ -40,17 +40,25 @@ rooms = {
 
             'Kitchen' : {
                   'north' : 'Hall',
+                  'east'  : 'Bed Room',
                   'item'  : 'monster',
                 },
             'Dining Room' : {
                   'west' : 'Hall',
-                  'south': 'Garden',
+                  'south': 'Bed Room',
                   'item' : 'potion'
                },
+            'Bed Room'   : {
+                  'north': 'Dinning Room',
+                  'east' : 'Garden',
+                  'west' : 'Kitchen',
+                  'item' :  'sword',
+                  },
             'Garden' : {
-                  'north' : 'Dining Room'
+                  'west' : 'Bed Room'
             }
          }
+
 
 
 # start the player in the Hall
@@ -101,7 +109,11 @@ while True:
             print('Can\'t get ' + move[1] + '!')
             
     ## If a player enters a room with a monster
-    if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
+    if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item'] and 'sword' in inventory:
+        print('You have killed a Monster, you monster..!!')
+        del rooms[currentRoom]['item']
+
+    elif 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item'] and 'sword' not in inventory:
         print('A monster has got you... GAME OVER!')
         break
 
